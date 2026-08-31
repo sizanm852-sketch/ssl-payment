@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-500: #aa3bff;
+  --color-primary-600: #8b2ecf;
+  --color-background-dark: #0f1015;
+  --color-surface-dark: #16171d;
+  
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-gray-50 dark:bg-background-dark text-gray-900 dark:text-gray-100 font-sans antialiased;
+    margin: 0;
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/70 dark:bg-surface-dark/70 backdrop-blur-lg border border-white/20 dark:border-white/10 shadow-xl;
+  }
+  
+  .glass-card {
+    @apply bg-white/70 dark:bg-surface-dark/70 backdrop-blur-lg border border-white/20 dark:border-white/10 shadow-xl rounded-2xl p-8;
+  }
+
+  .btn-primary {
+    @apply w-full flex justify-center py-3 px-4 border border-transparent rounded-xl shadow-sm text-sm font-medium text-white bg-primary-500 hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-all duration-300 transform hover:-translate-y-0.5;
+  }
+
+  .input-field {
+    @apply block w-full rounded-xl border-gray-300 dark:border-gray-700 bg-white/50 dark:bg-gray-800/50 shadow-sm focus:border-primary-500 focus:ring-primary-500 sm:text-sm px-4 py-3 transition-colors duration-200 outline-none;
+  }
+}
+
+/* Custom animated background for visual flair */
+.animated-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: 
+    radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+    radial-gradient(at 50% 0%, hsla(225,39%,30%,0.2) 0, transparent 50%), 
+    radial-gradient(at 100% 0%, hsla(339,49%,30%,0.2) 0, transparent 50%);
+  background-color: var(--color-background-dark);
+}
+
+@media (prefers-color-scheme: light) {
+  .animated-bg {
+    background: 
+      radial-gradient(at 0% 0%, hsla(253,16%,97%,1) 0, transparent 50%), 
+      radial-gradient(at 50% 0%, hsla(225,39%,70%,0.3) 0, transparent 50%), 
+      radial-gradient(at 100% 0%, hsla(339,49%,70%,0.3) 0, transparent 50%);
+    background-color: #f8fafc;
+  }
+}
