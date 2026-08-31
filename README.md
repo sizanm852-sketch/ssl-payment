@@ -232,11 +232,11 @@ CURRENCY=BDT
 # Payment Callback URLs
 # ==============================
 
-SUCCESS_URL=http://localhost:5000/api/payment/success
+SUCCESS_URL=https://sandbox-gw.sslcommerz.com/success
 
-FAIL_URL=http://localhost:5000/api/payment/fail
+FAIL_URL=https://sandbox-gw.sslcommerz.com/fail
 
-CANCEL_URL=http://localhost:5000/api/payment/cancel
+CANCEL_URL=https://sandbox-gw.sslcommerz.com/cancel
 ```
 
 The backend reads `STORE_ID`, `STORE_PASS`, `CURRENCY`, `SUCCESS_URL`, `FAIL_URL`, `CANCEL_URL`, `PORT`, and `DB` from environment variables.
