@@ -256,11 +256,11 @@ STORE_PASS=test_store_password
 
 CURRENCY=BDT
 
-SUCCESS_URL=http://localhost:5000/api/payment/success
+SUCCESS_URL=https://sandbox-gw.sslcommerz.com/success
 
-FAIL_URL=http://localhost:5000/api/payment/fail
+FAIL_URL=https://sandbox-gw.sslcommerz.com/fail
 
-CANCEL_URL=http://localhost:5000/api/payment/cancel
+CANCEL_URL=https://sandbox-gw.sslcommerz.com/cancel
 ```
 
 > Replace the example credentials with your own SSLCommerz Sandbox credentials.
